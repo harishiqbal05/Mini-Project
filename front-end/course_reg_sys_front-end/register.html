@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Course Registration System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #181c23 0%, #23272f 100%);
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .form-container {
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+      border-radius: 28px;
+      padding: 40px 32px 32px 32px;
+      max-width: 350px;
+      width: 100%;
+      text-align: center;
+      border: 1.5px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(14px);
+    }
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      background: linear-gradient(90deg, #00ffd0 30%, #a020f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    label {
+      font-size: 1rem;
+      color: #b7e4c7;
+      text-align: left;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    input, select {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      background: rgba(255,255,255,0.18);
+      color: #181c23;
+      margin-bottom: 4px;
+      font-family: inherit;
+      box-shadow: 0 2px 8px rgba(0,255,208,0.07);
+      outline: none;
+      transition: background 0.2s;
+    }
+    input:focus, select:focus {
+      background: rgba(0,255,208,0.12);
+    }
+    .submit-btn {
+      padding: 13px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #00ffd0 0%, #a020f0 100%);
+      color: #181c23;
+      box-shadow: 0 2px 12px rgba(0,255,208,0.08);
+      cursor: pointer;
+      transition: 
+        transform 0.18s, 
+        box-shadow 0.18s, 
+        background 0.22s,
+        color 0.18s;
+      outline: none;
+      letter-spacing: 0.5px;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 6px 24px #a020f0;
+      background: linear-gradient(90deg, #a020f0 0%, #00ffd0 100%);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Register for a Course</h2>
+    <form action="http://localhost:8080/courses/register" method="post">
+      <label for="name">Enter your name</label>
+      <input type="text" id="name" name="Name" required />
+
+      <label for="email">Enter your email ID</label>
+      <input type="email" id="email" name="EmailId" required />
+
+      <label for="course">Choose a course</label>
+      <select id="course" name="CourseName" required>
+        <option value="">Select a course</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="flutter">Flutter</option>
+        <option value="spring boot">spring Boot</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+     </div>
+</body>
+</html>
