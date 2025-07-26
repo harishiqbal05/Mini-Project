@@ -19,11 +19,7 @@ public class courseController {
 
     }
 
-    @GetMapping("/courses/enrolled")
-    public List<EnrollStudents> enrollstudents() {
-        return courseService.enrollstudents();
 
-    }
 
     @PostMapping("/courses/register")
     public String regcourse(@RequestParam("Name") String name,
